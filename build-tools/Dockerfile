@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
         openssl \
         libssl-dev \
         netcat \
+        parallel \
     && docker-php-ext-install -j$(nproc) iconv mcrypt mysqli \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd \
