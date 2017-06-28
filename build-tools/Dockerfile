@@ -1,7 +1,6 @@
 FROM php:5-cli
 
 ADD php/_010_php.ini /usr/local/etc/php/conf.d/
-COPY ./config_testing.php /config_testing.php
 COPY ./wait-mysql.sh /wait-mysql.sh
 COPY ./wait-smtp.sh /wait-smtp.sh
 
