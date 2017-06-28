@@ -43,7 +43,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     && chmod +x /usr/local/bin/sw \
     && chmod +x /config_testing.php \
     && chmod +x /wait-mysql.sh \
-    && chmod +x /wait-smtp.sh
+    && chmod +x /wait-smtp.sh \
+    && mkdir /php-config
 
 WORKDIR /tests
 
