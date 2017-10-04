@@ -1,4 +1,4 @@
-FROM php:5-cli
+FROM php:7.1-cli
 
 ADD php/_010_php.ini /usr/local/etc/php/conf.d/
 COPY ./wait-mysql.sh /wait-mysql.sh
@@ -40,7 +40,6 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     && wget http://shopwarelabs.github.io/sw-cli-tools/sw.phar \
     && mv sw.phar /usr/local/bin/sw \
     && chmod +x /usr/local/bin/sw \
-    && chmod +x /config_testing.php \
     && chmod +x /wait-mysql.sh \
     && chmod +x /wait-smtp.sh \
     && mkdir /php-config
